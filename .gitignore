@@ -16,6 +16,10 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.pkl
+*.pickle
+
+credentials.json
 
 # Serverless directories
 .serverless

@@ -1,8 +1,6 @@
 import convert_answers.functions as ca
 import random
 import pickle
-import json
-import sys
 
 def determineChoice(questions, answers):
     activity = answers[questions.index("activiteit")]
@@ -13,6 +11,9 @@ def determineChoice(questions, answers):
 
         questions.append("zon")
         answers.append("ja")
+
+        questions.append("water")
+        answers.append("zee")
 
     if activity == "avontuur":
         questions.append("avontuurlijk")
@@ -49,9 +50,9 @@ def determineChoice(questions, answers):
     # countries = ca.subset_based_on_transport(relevant_properties, questions, answers)
     # relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
     #
-    # ## WATER SUBSET
-    # countries = ca.subset_based_on_water(relevant_properties, questions, answers)
-    # relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
+    ## WATER SUBSET
+    countries = ca.subset_based_on_water(relevant_properties, questions, answers)
+    relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
     #
     # ## CONTINENT SUBSET
     # countries = ca.subset_based_on_continent(relevant_properties, questions, answers)
@@ -72,3 +73,6 @@ def determineChoice(questions, answers):
     recommended_country = random.choice(countries)
 
     return recommended_country
+
+# if __name__ == '__main__':
+#     determineChoice(["periode","continent_europa","activiteit","cultureel"],["zomer","buiten","strand","nee"])
