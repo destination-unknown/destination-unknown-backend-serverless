@@ -1,0 +1,25 @@
+{
+  "name": "destination-unknown-backend-serverless",
+  "version": "0.0.1",
+  "description": "Serverless backend for destination unknown",
+  "main": "main.py",
+  "dependencies": {
+    "serverless": "^1.45.1",
+    "serverless-python-requirements": "^4.3.0",
+    "serverless-offline": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destination-unknown/destination-unknown-backend-serverless.git"
+  },
+  "author": "J. Kaan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/destination-unknown/destination-unknown-backend-serverless/issues"
+  },
+  "homepage": "https://github.com/destination-unknown/destination-unknown-backend-serverless#readme"
+}
