@@ -21,8 +21,8 @@ def determineChoice(questions, answers):
 
     ca.check_qa(questions, answers)
 
-    properties = pickle.load(open('import_data/data_properties.pkl', 'rb'))
-    qa = pickle.load(open('import_data/data_qa.pkl', 'rb'))
+    properties = pickle.load(open('data_properties.pkl', 'rb'))
+    qa = pickle.load(open('data_qa.pkl', 'rb'))
 
     ## FIGURE OUT WHICH PERIOD (IF ASKED)
     try:
@@ -69,10 +69,10 @@ def determineChoice(questions, answers):
     ## ADVENTURE SUBSET
     countries = ca.subset_based_on_adventure(relevant_properties, questions, answers)
     relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
-    print(countries)
+    
     recommended_country = random.choice(countries)
 
     return recommended_country
 
-if __name__ == '__main__':
-    print(determineChoice(["periode","continent_europa","activiteit","cultureel"],["zomer","buiten","strand","nee"]))
+# if __name__ == '__main__':
+#     print(determineChoice(["periode","continent_europa","activiteit","cultureel"],["zomer","buiten","strand","nee"]))
