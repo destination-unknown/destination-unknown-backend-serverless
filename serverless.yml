@@ -11,7 +11,9 @@
 #
 # Happy Coding!
 
-service: test-python # NOTE: update this with your service name
+service: test-python
+tenant: jkaan
+app: destination-unknown-backend
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details

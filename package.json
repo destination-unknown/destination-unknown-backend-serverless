@@ -4,7 +4,7 @@
   "description": "Serverless backend for destination unknown",
   "main": "main.py",
   "dependencies": {
-    "serverless": "^1.46.1",
+    "serverless": "^1.48.2",
     "serverless-offline": "^4.7.0",
     "serverless-python-requirements": "^4.3.0"
   },
