@@ -16,7 +16,7 @@ def subset_based_on_temperature(relevant_properties, questions, answers):
         temperature = "onbelangrijk"
 
     if temperature == "warm":
-        low = 20
+        low = 25
         high = 100
     elif temperature == "koud":
         low = -100
