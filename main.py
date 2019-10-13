@@ -72,7 +72,7 @@ def determineChoice(questions, answers):
     
     recommended_country = random.choice(countries)
 
-    return countries
+    return recommended_country
 
 # if __name__ == '__main__':
 #     print(determineChoice(["periode","continent_europa","activiteit","cultureel"],["zomer","buiten","strand","nee"]))
