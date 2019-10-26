@@ -97,6 +97,21 @@ def subset_based_on_water(relevant_properties, questions, answers):
 
     return countries
 
+def subset_based_on_beach(relevant_properties, questions, answers):
+    try:
+        beach = answers[questions.index("strandvakantie")]
+        if beach == "ja":
+            beach_properties = relevant_properties[relevant_properties["properties"] == "strandvakantie"].copy()
+            countries = beach_properties[beach_properties['values'] == "ja"]["country"].values
+            countries = np.unique(countries)
+        else:
+            countries = np.unique(relevant_properties["country"])
+
+    except:
+        countries = np.unique(relevant_properties["country"])
+
+    return countries
+
 def subset_based_on_continent(relevant_properties, questions, answers):
     try:
         continent = answers[questions.index("continent")]
