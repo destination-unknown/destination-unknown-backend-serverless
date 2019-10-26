@@ -12,8 +12,8 @@ def determineChoice(questions, answers):
         questions.append("zon")
         answers.append("ja")
 
-        questions.append("water")
-        answers.append("zee")
+        questions.append("strandvakantie")
+        answers.append("ja")
 
     if activity == "avontuur":
         questions.append("avontuurlijk")
@@ -50,8 +50,12 @@ def determineChoice(questions, answers):
     # countries = ca.subset_based_on_transport(relevant_properties, questions, answers)
     # relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
     #
-    ## WATER SUBSET
-    countries = ca.subset_based_on_water(relevant_properties, questions, answers)
+    # ## WATER SUBSET
+    # countries = ca.subset_based_on_water(relevant_properties, questions, answers)
+    # relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
+
+    ## BEACH SUBSET
+    countries = ca.subset_based_on_beach(relevant_properties, questions, answers)
     relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
     #
     # ## CONTINENT SUBSET
