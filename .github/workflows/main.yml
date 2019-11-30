@@ -1,6 +1,8 @@
-name: Python application
+name: Trigger daily build at 6AM
 
-on: [push]
+on:
+  schedule:
+    - cron: "0 5 * * *" # every day at 6 am (UTC+1)
 
 jobs:
   build:
