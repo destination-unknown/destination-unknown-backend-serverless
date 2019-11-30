@@ -20,6 +20,7 @@ jobs:
           pipenv install
       - name: Update backend
         run: |
+          PATH="$PATH:/home/runner/.local/bin"
           pipenv run python import_data/main.py
         env:
           GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
