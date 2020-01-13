@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "ed116ff3-5fa5-4719-9964-384e996d8696",
+		"name": "Destination Unknown",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Old Generate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questions_list\": [\n        \"periode\",\n        \"continent_europa\",\n        \"activiteit\",\n        \"cultureel\"\n    ],\n    \"answers_list\": [\n        \"zomer\",\n        \"binnen\",\n        \"strand\",\n        \"ja\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New generate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questions_list\": [\n        \"periode\",\n        \"doel\",\n        \"lengte reis\",\n        \"temperatuur\",\n        \"activiteit\"\n    ],\n    \"answers_list\": [\n        \"zomer\",\n        \"tot rust komen\",\n        \"24\",\n        \"15\",\n        \"hiken|watersporten|wintersporten\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

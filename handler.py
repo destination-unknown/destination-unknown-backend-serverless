@@ -1,11 +1,11 @@
 import json
-import main
+import main_exp
 
 def hello(event, context):
     body = json.loads(event['body'])
 
     returnBody = {
-        "country": main.determineChoice(body['questions_list'], body['answers_list'])
+        "countries": main_exp.determineChoice(body['questions_list'], body['answers_list'])
     }
 
     response = {

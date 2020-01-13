@@ -10,6 +10,7 @@ google-api-python-client = "*"
 google-auth-oauthlib = "*"
 numpy = "*"
 pandas = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.7"

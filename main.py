@@ -1,6 +1,8 @@
 import convert_answers.functions as ca
 import random
 import pickle
+import pandas as pd
+import matplotlib.pyplot as plt
 
 def determineChoice(questions, answers):
     activity = answers[questions.index("activiteit")]
@@ -73,10 +75,19 @@ def determineChoice(questions, answers):
     ## ADVENTURE SUBSET
     countries = ca.subset_based_on_adventure(relevant_properties, questions, answers)
     relevant_properties = relevant_properties[relevant_properties["country"].isin(countries)]
-    
-    recommended_country = random.choice(countries)
+    if len(countries) > 0:
+        recommended_country = random.choice(countries)
+    else:
+        recommended_country = "GEEN LAND MOGELIJK"
+    print(countries)
+    print(len(countries))
 
     return recommended_country
 
-# if __name__ == '__main__':
-#     print(determineChoice(["periode","continent_europa","activiteit","cultureel"],["zomer","buiten","strand","nee"]))
+if __name__ == '__main__':
+    all_answer_combinations = [[a, b, c, d] for a in ["winter", "zomer", "herfst", "lente"] for b in ["binnen", "buiten"] for c in ["avontuur", "strand"] for d in ["ja", "nee"]]
+    for answer in all_answer_combinations:
+        print(answer)
+        determineChoice(["periode","continent_europa","activiteit","cultureel"],answer)
+
+
